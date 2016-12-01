@@ -1,38 +1,29 @@
-# \<paper-editable-list\>
+# \<polymer-fullpage\>
 
 
 
-## Install the Polymer-CLI
+## Install Polymer-fullpage component using bower
 
-First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) installed. Then run `polymer serve` to serve your application locally.
+First, make sure you have the [Bower Installed](https://bower.io/) installed. Then run `bower install --save polymer-fullpage` to get the latest copy of the component.
 
-## Viewing Your Application
-
-```
-$ polymer serve
-```
-
-## Building Your Application
+## Downloading the Component
 
 ```
-$ polymer build
+$ bower install --save paper-editable-list
 ```
 
-This will create a `build/` folder with `bundled/` and `unbundled/` sub-folders
-containing a bundled (Vulcanized) and unbundled builds, both run through HTML,
-CSS, and JS optimizers.
+## Importing the component
 
-You can serve the built versions by giving `polymer serve` a folder to serve
-from:
-
+Inside your elements imports document import `polymer-fullpage.html`
 ```
-$ polymer serve build/bundled
+<link rel="import" href="../path/to/paper-editable-list.html"/>
 ```
 
-## Running Tests
+This will include the `paper-editable-list` component to your application
+
+## Using the component
 
 ```
-$ polymer test
+<paper-editable-list data="[arr]"></paper-editable-list>
 ```
 
-Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally.
