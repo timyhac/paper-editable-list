@@ -18,82 +18,76 @@
       :host {
         display: block;
       }
+
       .grab-handle {
           cursor: move;
           padding: 0px 10px 0px 0px;
           vertical-align: middle;
           color: #ccc;
       }
+
       .add-new {
           padding: 0px 10px 0px 0px;
           vertical-align: middle;
           color: #ccc;
       }
-      #sortable-js {}
-    	li {
-    		position: relative;
-        /*left: 0px;*/
-        list-style-type: none;
-    	}
 
     	.removeButton {
         color: #888;
     		transition: opacity .1s;
     		opacity: 0;
     		display: block;
-    		/*cursor: pointer;*/
-        /*height: 100px;*/
     		top: 0px;
-        /*padding: 0px;*/
-        /*margin: 0px;*/
         height: 100%;
     		right: 0px;
     		position: absolute;
-        /*height: 100%;*/
         font-style: normal;
     	}
 
-    	#sortable-js li:hover paper-icon-button {
+    	.listElement:hover paper-icon-button {
     		opacity: 1;
         display: inline-block;
     	}
 
-      #sortable-js li:hover {
-        background-color: #eeeeee;
+      .listElement:hover {
+        background-color: #eee;
       }
 
-      paper-input {
+      li {
+        position: relative;
+        list-style-type: none;
+      }
+
+      .inputElement {
         display: inline-block;
         padding: 0px;
         width: 80%;
       }
-      paper-button {
+      
+      .topButtons {
         padding-top: 10px;
         margin: 0px;
         min-width: 49%;
         display: inline-block;
         text-align: center;
       }
-      .floated-label-placeholder {
-        display: none;
-      }
     </style>
     <div>
-      <paper-button on-tap="ok">OK</paper-button>
-      <paper-button on-tap="reset">RESET</paper-button>
+      <paper-button class="topButtons" on-tap="ok">OK</paper-button>
+      <paper-button class="topButtons" on-tap="reset">RESET</paper-button>
     </div>
-    <sortable-js id="sortable-js" animation="150">
+    <sortable-js animation="150">
       <template is="dom-repeat" items="{{_data}}">
-        <li>
+        <li class="listElement">
           <iron-icon class="grab-handle" icon="icons:reorder"></iron-icon>
-          <paper-input value="{{item.d}}" placeholder="Item"></paper-input>
+          <paper-input class="inputElement" value="{{item.d}}" placeholder="Item"></paper-input>
           <paper-icon-button class="removeButton" icon="icons:delete" on-tap="remove"></paper-icon-button>
         </li>
       </template>
     </sortable-js>
     <li>
       <paper-icon-button class="add-new" icon="icons:add"></paper-icon-button>
-      <paper-input value="{{item}}" placeholder="Add New" on-change="add"></paper-input>
+      <paper-input class="inputElement" value="{{item}}" placeholder="Add New" on-change="add"></paper-input>
     </li>
   </template>
 
@@ -109,7 +103,6 @@
         },
       },
       ready: function() {
-        console.log(this.data)
         this.reset();
       },
       add: function(e) {
@@ -126,9 +119,7 @@
       },
       ok: function() {
         this.data = this._data.map( x => x.d);
-        console.log(this.data);
       }
-
     });
   </script>
 </dom-module>
