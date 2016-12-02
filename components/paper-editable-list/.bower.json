@@ -1,0 +1,35 @@
+{
+  "name": "paper-editable-list",
+  "main": "paper-editable-list.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.4.0",
+    "Sortable": "sortablejs#^1.4.2",
+    "paper-icon-button": "^1.1.4",
+    "paper-input": "^1.1.22",
+    "paper-button": "^1.0.14"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
+    "web-component-tester": "^4.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+  },
+  "keywords": [
+    "web-components"
+  ],
+  "authors": [
+    "timyhac https://github.com/timyhac"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/timyhac/paper-editable-list",
+  "_release": "a4b945b86a",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "a4b945b86ae57948bcd85ac2ce6099bd95921c3e"
+  },
+  "_source": "https://github.com/timyhac/paper-editable-list.git",
+  "_target": "master",
+  "_originalSource": "timyhac/paper-editable-list",
+  "_direct": true
+}
